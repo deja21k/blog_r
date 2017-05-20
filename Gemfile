@@ -22,6 +22,7 @@ gem 'devise', '~> 4.3.0'
 gem 'activeadmin'
 gem 'inherited_resources', '~> 1.7', '>= 1.7.2'
 gem 'active_skin'
+gem 'paperclip', '~> 5.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1185,3 +1185,143 @@ Processing by Admin::AdminUsersController#index as HTML
 Completed 200 OK in 136ms (Views: 132.7ms | ActiveRecord: 0.6ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPosts (20170520160627)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/bin/rake:22)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_content_type" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170520160627"]]
+  [1m[35m (21.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin/admin_users" for 127.0.0.1 at 2017-05-20 18:18:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/index.html.arb (2016.6ms)
+Completed 200 OK in 2040ms (Views: 2020.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2017-05-20 18:18:06 +0200
+Processing by Admin::PostsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/index.html.arb (107.1ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2017-05-20 18:18:30 +0200
+Processing by Admin::PostsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/new.html.arb (107.6ms)
+Completed 200 OK in 117ms (Views: 109.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2017-05-20 18:20:29 +0200
+Processing by Admin::PostsController#new as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/new.html.arb (113.4ms)
+Completed 200 OK in 136ms (Views: 115.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/posts" for 127.0.0.1 at 2017-05-20 18:23:05 +0200
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Kdnp6nJRpVvP5TVTKHe2Nt7ZrIDN65FTQwhpTN3+AkSVrId24YT6fsYcLpkDj7xoRQH9HKlQ8gyYZf9i4FRRw==", "post"=>{"title"=>"post 1 ", "body"=>"post 1 content", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3e44912a0 @tempfile=#<Tempfile:/tmp/RackMultipart20170520-1756-1yu1aur.jpg>, @original_filename="full_cevapi.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"full_cevapi.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-nm7eaj.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]'
+Command :: convert '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]' -auto-orient -resize "300x300>" '/tmp/e25e77a81c4432a9ed91c7059a95ec9420170520-1756-t0srdo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]'
+Command :: convert '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-1pkt0w9.jpg[0]' -auto-orient -resize "100x100>" '/tmp/e25e77a81c4432a9ed91c7059a95ec9420170520-1756-mto06n'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/3db41195b0059947c9f1bf0143cfb04220170520-1756-fiqmbu.jpg'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post 1 "], ["body", "post 1 content"], ["created_at", "2017-05-20 16:23:06.112701"], ["updated_at", "2017-05-20 16:23:06.112701"], ["image_file_name", "full_cevapi.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 139020], ["image_updated_at", "2017-05-20 16:23:05.549541"]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/posts/1
+Completed 302 Found in 605ms (ActiveRecord: 24.4ms)
+
+
+Started GET "/admin/posts/1" for 127.0.0.1 at 2017-05-20 18:23:06 +0200
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/show.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0/app/views/active_admin/resource/show.html.arb (87.2ms)
+Completed 200 OK in 93ms (Views: 89.2ms | ActiveRecord: 0.3ms)
+
+
