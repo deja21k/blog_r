@@ -21,6 +21,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'devise', '~> 4.3.0'
 gem 'activeadmin'
 gem 'inherited_resources', '~> 1.7', '>= 1.7.2'
+gem 'active_skin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
